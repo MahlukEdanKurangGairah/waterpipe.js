@@ -66,7 +66,7 @@
             this.exportCanvas = document.createElement('canvas');
             this.exportCanvas.width = this.displayWidth;
             this.exportCanvas.height = this.displayHeight;
-            this.exportContext = this.exportCanvas.getContext("2d");
+            this.exportContext = this.exportCanvas.getContext("2d",{ willReadFrequently: true });
         },
         generate: function () {
             this.drawCount = 0;
